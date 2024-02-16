@@ -1,0 +1,74 @@
+body {
+  background: rgb(211, 248, 211);
+  font-size: 20;
+  font-family: "Caveat", cursive;
+  font-family: "Rubik", sans-serif;
+}
+.main-color {
+  background: rgb(255, 255, 255);
+  max-width: 550px;
+  margin: 40px auto;
+  padding: 40px;
+  border-radius: 30px;
+}
+form {
+  text-align: center;
+}
+.search-box {
+  background: rgb(234, 255, 234);
+  border: none;
+  border-radius: 30px;
+  padding: 10px 35px;
+}
+.search-button {
+  border: none;
+  border-radius: 30px;
+  background: rgb(211, 248, 211);
+  padding: 12px;
+  font-weight: 550;
+  color: rgb(56, 56, 56);
+}
+p,
+footer {
+  color: #a9a6b3;
+}
+.identity {
+  font-weight: 550;
+  color: #f65282;
+}
+h1 {
+  font-weight: 2000px;
+  margin: 30px 0px 35px 20px;
+}
+header {
+  padding-bottom: 25px;
+  border-bottom: 2px solid rgb(211, 248, 211);
+}
+footer {
+  border-top: 2px solid rgb(211, 248, 211);
+  padding-top: 20px;
+  margin-top: 60px;
+  text-align: center;
+  font-family: none;
+}
+p {
+  margin: 0px 0px 50px 20px;
+}
+.tempature {
+  display: flex;
+  margin: -160px 350px 0px;
+}
+.icon {
+  width: 88px;
+  height: 88px;
+  margin-top: -13px;
+}
+.temp {
+  font-size: 65px;
+  font-weight: bold;
+  margin: =50px 0px 0px 5px;
+}
+.degree {
+  font-size: 30px;
+  margin: 10px -10px 0px 8px;
+}
