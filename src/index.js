@@ -39,7 +39,7 @@ function getDegree(response) {
 }
 
 function callCity(city) {
-  let apiKey = "b2a5adcct04b33178913oc335f405433";
+  let apiKey = "7e0t14a370o3b9095a4ff16f06c1bee0";
   let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}`;
 
   axios.get(apiUrl).then(getDegree);
