@@ -34,7 +34,7 @@ footer {
 }
 .identity {
   font-weight: 550;
-  color: #f65282;
+  color: rgb(82, 211, 82);
 }
 h1 {
   font-weight: 2000px;
@@ -47,12 +47,12 @@ header {
 footer {
   border-top: 2px solid rgb(211, 248, 211);
   padding-top: 20px;
-  margin-top: 60px;
+  margin-top: 40px;
   text-align: center;
   font-family: none;
 }
 p {
-  margin: 0px 0px 50px 20px;
+  margin: 0px 0px 40px 20px;
 }
 .tempature {
   display: flex;
@@ -70,4 +70,17 @@ p {
 .degree {
   font-size: 30px;
   margin: 10px -10px 0px 8px;
+}
+
+.weather-forecast {
+  margin-top: 90px;
+  text-align: center;
+}
+.week {
+  color: #a9a6b3;
+  font-size: 21px;
+}
+.max {
+  font-size: 21px;
+  color: rgb(82, 211, 82);
 }
