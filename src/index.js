@@ -59,3 +59,17 @@ let selectForm = document.querySelector("#form");
 
 selectForm.addEventListener("submit", weather);
 callCity("paris");
+function weekDays(days) {
+  days = ["Fri", "Sat", "Sun", "Mon", "Tue"];
+  let forecast =
+    forecast +
+    (
+      <div class="weather-forecast">
+        <div class="week">${days}</div>
+        <div class-="weather-icon">⛅</div>
+        <span class="max">18°</span>
+        <span class="min">12°</span>
+      </div>
+    );
+}
+weekDays();
