@@ -20,6 +20,7 @@ function formatDate(date) {
   return `${day} ${hours}:${minutes}`;
 }
 function getDegree(response) {
+  console.log(response.data.condition.icon_url);
   let temperature = document.querySelector("#temp");
   let finalResponse = response.data.temperature.current;
   let currentTemp = Math.round(finalResponse);
@@ -36,6 +37,7 @@ function getDegree(response) {
   temperature.innerHTML = currentTemp;
   currentTime.innerHTML = formatDate(date);
   iconUrl.innerHTML = `<img src="${response.data.condition.icon_url}"  class="weather-app-icon" />`;
+  getforecast(response.data.city);
 }
 
 function callCity(city) {
@@ -54,21 +56,34 @@ function weather(event) {
   fianal.innerHTML = cityValue;
   callCity(cityValue);
 }
-function weekDays() {
-  days = ["Fri", "Sat", "Sun", "Mon", "Tue"];
+function getforecast(city) {
+  let apiKey = "7e0t14a370o3b9095a4ff16f06c1bee0";
+  let apiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${apiKey}`;
+  axios.get(apiUrl).then(weekDays);
+}
+function getWeekDay(timestamp) {
+  let dates = new Date(timestamp * 1000);
+  let exactDay = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+  return exactDay[dates.getDay()];
+}
+
+function weekDays(response) {
   let forecast = "";
 
-  days.forEach(function finalForecast(day) {
-    forecast =
-      forecast +
-      `
+  let days = response.data.daily;
+  days.forEach(function finalForecast(day, index) {
+    if (index < 5) {
+      forecast =
+        forecast +
+        `
       <div class="weather-forecast">
-        <div class="week">${day}</div>
-        <div class-="weather-icon">⛅</div>
-        <span class="max">18°</span>
-        <span class="min">12°</span>
+        <div class="week">${getWeekDay(day.time)}</div>
+        <div ><img src="${day.condition.icon_url}"  class="weather-icon"> </div>
+        <span class="max">${Math.round(day.temperature.maximum)}°</span>
+        <span class="min">${Math.round(day.temperature.minimum)}°</span>
       </div>
     `;
+    }
   });
 
   let select = document.querySelector("#forcastid");
@@ -79,5 +94,4 @@ let selectForm = document.querySelector("#form");
 
 selectForm.addEventListener("submit", weather);
 
-weekDays();
 callCity("paris");
