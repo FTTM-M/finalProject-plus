@@ -84,3 +84,7 @@ p {
   font-size: 21px;
   color: rgb(82, 211, 82);
 }
+.forecastclass {
+  display: flex;
+  justify-content: space-around;
+}

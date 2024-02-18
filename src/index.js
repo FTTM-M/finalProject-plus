@@ -54,22 +54,30 @@ function weather(event) {
   fianal.innerHTML = cityValue;
   callCity(cityValue);
 }
-
-let selectForm = document.querySelector("#form");
-
-selectForm.addEventListener("submit", weather);
-callCity("paris");
-function weekDays(days) {
+function weekDays() {
   days = ["Fri", "Sat", "Sun", "Mon", "Tue"];
-  let forecast =
-    forecast +
-    (
+  let forecast = "";
+
+  days.forEach(function finalForecast(day) {
+    forecast =
+      forecast +
+      `
       <div class="weather-forecast">
-        <div class="week">${days}</div>
+        <div class="week">${day}</div>
         <div class-="weather-icon">⛅</div>
         <span class="max">18°</span>
         <span class="min">12°</span>
       </div>
-    );
+    `;
+  });
+
+  let select = document.querySelector("#forcastid");
+  select.innerHTML = forecast;
 }
+
+let selectForm = document.querySelector("#form");
+
+selectForm.addEventListener("submit", weather);
+
 weekDays();
+callCity("paris");
