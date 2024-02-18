@@ -87,3 +87,6 @@ p {
   font-size: 21px;
   color: rgb(82, 211, 82);
 }
+.weather-icon {
+  width: 100%;
+}
