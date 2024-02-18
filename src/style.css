@@ -71,20 +71,19 @@ p {
   font-size: 30px;
   margin: 10px -10px 0px 8px;
 }
-
+.forecastclass {
+  display: flex;
+  justify-content: space-around;
+}
 .weather-forecast {
   margin-top: 90px;
   text-align: center;
 }
 .week {
   color: #a9a6b3;
-  font-size: 21px;
+  font-size: 18px;
 }
 .max {
   font-size: 21px;
   color: rgb(82, 211, 82);
-}
-.forecastclass {
-  display: flex;
-  justify-content: space-around;
 }
