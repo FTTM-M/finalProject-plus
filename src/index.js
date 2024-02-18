@@ -20,7 +20,6 @@ function formatDate(date) {
   return `${day} ${hours}:${minutes}`;
 }
 function getDegree(response) {
-  console.log(response.data.condition.icon_url);
   let temperature = document.querySelector("#temp");
   let finalResponse = response.data.temperature.current;
   let currentTemp = Math.round(finalResponse);
